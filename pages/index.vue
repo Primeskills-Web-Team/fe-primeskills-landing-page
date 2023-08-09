@@ -3,7 +3,7 @@
     <div class="flex items-center justify-center">
       <img src="~/assets/img/logo.png" @click="toHero()" class="cursor-pointer logo-img"/>
     </div>
-    <img src="~/assets/img/call.png" @click="toAbout()" class="cursor-pointer call-img"/>
+    <img src="~/assets/img/call3.svg" @click="toAbout()" class="cursor-pointer call-img"/>
     <div
       class="btn-nav flex item-center justify-center noselect"
       style="position: fixed;"

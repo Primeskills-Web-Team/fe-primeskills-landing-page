@@ -9,7 +9,7 @@
           class="card-list flex flex-col cursor-pointer"
           @click="dialogVisible = true"
         >
-          <img src="~/assets/img/im1.png" class="img-list" />
+          <img src="~/assets/img/myth/1.png" class="img-list" />
           <div class="text-list">
             Does VR Really Cause Motion Sickness (Cybersickness) and Discomfort?
           </div>
@@ -48,9 +48,10 @@
           class="card-list flex flex-col cursor-pointer"
           @click="dialogVisible2 = true"
         >
-          <img src="~/assets/img/im2.png" class="img-list" />
+          <img src="~/assets/img/myth/2.png" class="img-list" />
           <div class="text-list">
-            Does VR Really Cause Motion Sickness (Cybersickness) and Discomfort?
+            <br>
+            Does VR Give You an Isolating <br>Experience?
           </div>
           <svg
             class="cursor-pointer btn-show"
@@ -87,9 +88,10 @@
           class="card-list flex flex-col cursor-pointer"
           @click="dialogVisible3 = true"
         >
-          <img src="~/assets/img/im3.png" class="img-list" />
+          <img src="~/assets/img/myth/3.png" class="img-list" />
           <div class="text-list">
-            Does VR Really Cause Motion Sickness (Cybersickness) and Discomfort?
+            <br>
+            Does AR only used for gamifying?
           </div>
           <svg
             class="cursor-pointer btn-show"
@@ -126,9 +128,9 @@
           class="card-list flex flex-col cursor-pointer"
           @click="dialogVisible4 = true"
         >
-          <img src="~/assets/img/im4.png" class="img-list" />
+          <img src="~/assets/img/myth/4.png" class="img-list" />
           <div class="text-list">
-            Does VR Really Cause Motion Sickness (Cybersickness) and Discomfort?
+            Is Gamified Assessment and Learning just about playing games?
           </div>
           <svg
             class="cursor-pointer btn-show"
@@ -168,7 +170,7 @@
           class="flex noselect flex-col sec-grup cursor-pointer"
           @click="dialogVisible5 = true"
         >
-          <img src="~/assets/img/im1.png" class="img-sec" />
+          <img src="~/assets/img/myth/1.png" class="img-sec" />
           <div class="text-sec">
             Does VR Really Cause Motion
 Sickness  (Cybersickness) 
@@ -209,7 +211,7 @@ and Discomfort?
           class="flex noselect flex-col sec-grup cursor-pointer"
           @click="dialogVisible6 = true"
         >
-          <img src="~/assets/img/im2.png" class="img-sec" />
+          <img src="~/assets/img/myth/2.png" class="img-sec" />
           <div class="text-sec">
             Does VR Give You an 
 Isolating Experience?
@@ -249,7 +251,7 @@ Isolating Experience?
           class="flex noselect flex-col sec-grup cursor-pointer"
           @click="dialogVisible7 = true"
         >
-          <img src="~/assets/img/im3.png" class="img-sec" />
+          <img src="~/assets/img/myth/3.png" class="img-sec" />
           <div class="text-sec">Does VR Give You an 
             Isolating Experience?
           </div>
@@ -288,7 +290,7 @@ Isolating Experience?
           class="flex noselect flex-col sec-grup cursor-pointer"
           @click="dialogVisible8 = true"
         >
-          <img src="~/assets/img/im4.png" class="img-sec" />
+          <img src="~/assets/img/myth/4.png" class="img-sec" />
           <div class="text-sec">Is Gamified Assessment and 
             Learning just about 
             playing games?
@@ -379,7 +381,7 @@ Isolating Experience?
     >
       <div class="dialog-btn flex items-center flex-col">
         <div class="content-data">
-          <img src="~/assets/img/im1.png" class="img-dialog" />
+          <img src="~/assets/img/myth/1.png" class="img-dialog" />
           <div class="title-content">
             Does VR Really Cause Motion Sickness (Cybersickness) and Discomfort?
           </div>
@@ -416,7 +418,7 @@ Isolating Experience?
     >
       <div class="dialog-btn flex items-center flex-col">
         <div class="content-data">
-          <img src="~/assets/img/im2.png" class="img-dialog" />
+          <img src="~/assets/img/myth/2.png" class="img-dialog" />
           <div class="title-content">
             Does VR Give You an Isolating Experience?
           </div>
@@ -448,7 +450,7 @@ Isolating Experience?
     >
       <div class="dialog-btn flex items-center flex-col">
         <div class="content-data">
-          <img src="~/assets/img/im3.png" class="img-dialog" />
+          <img src="~/assets/img/myth/3.png" class="img-dialog" />
           <div class="title-content">Does AR only used for gamifying?</div>
           <div class="desc-content">
             In fact, AR already gained a lot of popularity in gaming, and its
@@ -477,7 +479,7 @@ Isolating Experience?
     >
       <div class="dialog-btn flex items-center flex-col">
         <div class="content-data">
-          <img src="~/assets/img/im4.png" class="img-dialog" />
+          <img src="~/assets/img/myth/4.png" class="img-dialog" />
           <div class="title-content">
             Is Gamified Assessment and Learning just about playing games?
           </div>

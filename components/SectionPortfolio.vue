@@ -437,6 +437,8 @@ export default {
   }
   .card-carousel {
     position: relative;
+    // box-shadow: 2px 1px 50px;
+    box-shadow: 0px 5px 10px 22px rgba(0, 0, 0, 0.5);
     width: 100%;
     height: 100vh;
     background-size: cover;
