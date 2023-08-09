@@ -50,8 +50,8 @@
         >
           <img src="~/assets/img/myth/2.png" class="img-list" />
           <div class="text-list">
-            <br>
-            Does VR Give You an Isolating <br>Experience?
+          <br>
+            Does VR Give You an Isolating Experience?
           </div>
           <svg
             class="cursor-pointer btn-show"
@@ -213,8 +213,7 @@ and Discomfort?
         >
           <img src="~/assets/img/myth/2.png" class="img-sec" />
           <div class="text-sec">
-            Does VR Give You an 
-Isolating Experience?
+            Does VR Give You an Isolating Experience?
           </div>
           <svg
             class="cursor-pointer btn-show"
@@ -252,8 +251,7 @@ Isolating Experience?
           @click="dialogVisible7 = true"
         >
           <img src="~/assets/img/myth/3.png" class="img-sec" />
-          <div class="text-sec">Does VR Give You an 
-            Isolating Experience?
+          <div class="text-sec">Does VR Give You an Isolating Experience?
           </div>
           <svg
             class="cursor-pointer btn-show"
@@ -864,8 +862,12 @@ async function save() {
       border-radius: 10px;
       background: linear-gradient(180deg, #549adb 0%, #1d5b95 100%);
       .img-list {
-        width: 198px;
-        height: 182px;
+        // -o-object-fit: contain;
+        object-fit: cover;
+        // width: 198px;
+        // height: 182px;
+        // max-width: 100%;
+        // max-height: 100%;
       }
       .text-list {
         color: #fff;
@@ -978,8 +980,9 @@ async function save() {
       border-radius: 10px;
       background: linear-gradient(180deg, #549adb 0%, #1d5b95 100%);
       .img-sec {
-        width:100%;
-        height: 182px;
+        // width:100%;
+        // height: 182px;
+        object-fit: cover;
       }
       .text-sec {
         color: #fff;
