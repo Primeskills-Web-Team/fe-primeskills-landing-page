@@ -46,7 +46,7 @@
             Read More
           </div>
         </div>
-        <div class="card-port" style="margin-right: ">
+        <div class="card-port">
           <img src="~/assets/img/c3.png" class="bg-card" />
           <div class="text-card">
             Primeskills and the Ministry of Home Affairs (Kemendagri) have
@@ -155,6 +155,7 @@ export default {
         position: relative;
         width: 337px;
         height: 317px;
+        margin-right: 38px;
         border-radius: 13px;
         background: #fff;
         box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.25);
@@ -193,6 +194,7 @@ export default {
     }
   }
 }
+
 
 @media only screen and (max-width: 1000px) {
   .portfolio {

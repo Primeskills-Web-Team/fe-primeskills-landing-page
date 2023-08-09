@@ -498,7 +498,7 @@ and Discomfort?
             investments. Primeskills delivers a solution for university students
             and graduates to access job vacancies within their area of studies,
             and for companies to access a highly skilled and relevant talent
-            pool for their job vacancies within  their company. 
+            pool for their job vacancies within their company. 
           </div>
           <div class="footer-btn flex items-center justify-center">
             <div class="arrow-down" />

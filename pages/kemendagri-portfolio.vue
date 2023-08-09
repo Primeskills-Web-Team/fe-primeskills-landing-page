@@ -157,6 +157,7 @@ export default {
         position: relative;
         width: 337px;
         height: 317px;
+        margin-right: 38px;
         border-radius: 13px;
         background: #fff;
         box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.25);
@@ -195,6 +196,7 @@ export default {
     }
   }
 }
+
 
 @media only screen and (max-width: 1000px) {
   .portfolio {
