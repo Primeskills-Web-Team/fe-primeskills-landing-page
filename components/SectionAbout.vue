@@ -50,8 +50,10 @@
         >
           <img src="~/assets/img/myth/2.png" class="img-list" />
           <div class="text-list">
-          <br>
+        
             Does VR Give You an Isolating Experience?
+            <br>
+            <span style="color: transparent;">space</span>
           </div>
           <svg
             class="cursor-pointer btn-show"
@@ -90,8 +92,10 @@
         >
           <img src="~/assets/img/myth/3.png" class="img-list" />
           <div class="text-list">
-            <br>
+          
             Does AR only used for gamifying?
+            <br>
+            <span style="color: transparent;">space</span>
           </div>
           <svg
             class="cursor-pointer btn-show"
