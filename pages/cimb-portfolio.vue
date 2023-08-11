@@ -1,11 +1,30 @@
 <template>
   <div class="portfolio flex items-center justify-center">
-    <div class="content-data flex items-center justify-center flex-col">
-      <img
-        src="~/assets/img/portfolio/logo_dark.svg"
-        class="cursor-pointer logo-img"
-        @click="toHome()"
-      />
+    <!-- <div class="content-data flex items-center justify-center flex-col"> -->
+<div class="content-data ">
+  <div class="flex items-start flex-row column-sec justify-between">
+        <!-- <div class="flex flex-row justify-start mr-4 flex-auto"  @click="toHome()"> -->
+          <div class="mt-1 flex flex-row">
+            <img src="~/assets/img/arrow.png" alt="" @click="toHome()" class="cursor-pointer mr-2">
+           Back to our Website
+          </div>
+        <!-- </div> -->
+        <!-- <div class="flex flex-col"> -->
+
+          <img
+            src="~/assets/img/portfolio/logo_dark.svg"
+            class="cursor-pointer logo-img"
+            @click="toHome()"
+          />
+
+        <div style="color: transparent;">
+         nav menu landing page
+        </div>
+          <!-- </div> -->
+    </div>
+
+
+      <div class="flex items-center justify-center flex-col">
       <div class="title-por">Our Portfolios</div>
       <img src="~/assets/img/portfolio/bg_cimb.jpg" class="bg-img" />
       <div class="flex items-start flex-row mt-4 coloumn-sec">
@@ -72,6 +91,7 @@
         </div>
       </div>
     </div>
+</div>
   </div>
 </template>
 
