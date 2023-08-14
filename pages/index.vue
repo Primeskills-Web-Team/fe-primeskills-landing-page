@@ -4,6 +4,7 @@
       <img src="~/assets/img/logo.png" @click="toHero()" class="cursor-pointer logo-img"/>
     </div>
     <img src="~/assets/img/call3.svg" @click="toAbout()" class="cursor-pointer call-img"/>
+    <img src="~/assets/img/notif.png" @click="notif = false" class="cursor-pointer notif-img" v-if="notif"/>
     <div
       class="btn-nav flex item-center justify-center noselect"
       style="position: fixed;"
@@ -54,6 +55,8 @@
 const router = useRouter();
 
 const nav = ref(false);
+let notif = ref(true);
+
 function toWa() {
   window.open(
     "https://api.whatsapp.com/send/?phone=62817719100&text&type=phone_number&app_absent=0",
@@ -99,6 +102,13 @@ function toMyth () {
     position: fixed;
     bottom: 10px;
     right: 10px;
+  }
+
+  .notif-img {
+    z-index: 2;
+    position: fixed;
+    bottom: 10px;
+    // right: 10px;
   }
   .card-section {
     z-index: 1;
