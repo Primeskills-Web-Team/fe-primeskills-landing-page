@@ -22,8 +22,17 @@ export default defineNuxtConfig({
     'vue3-carousel-nuxt',
     '@element-plus/nuxt',
     '@vueuse/nuxt',
-    '@nuxtjs/color-mode'
+    '@nuxtjs/color-mode',
+    'nuxt-gtag'
+
   ],
+  //GTag
+  gtag: {
+    id: 'G-79QHGCJ32B',
+    config: {
+      page_title: 'Primeskills'
+    }
+  },
   plugins: [
     // {src: '~/plugins/gdialog', mode: 'client'}
   ],
