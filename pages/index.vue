@@ -1,21 +1,33 @@
 <template>
   <div class="primeskills">
     <div class="flex items-center justify-center">
-      <img src="~/assets/img/logo.png" @click="toHero()" class="cursor-pointer logo-img"/>
+      <img
+        src="~/assets/img/logo.png"
+        @click="toHero()"
+        class="cursor-pointer logo-img"
+      />
     </div>
-    <img src="~/assets/img/call3.svg" @click="toAbout()" class="cursor-pointer call-img"/>
-    <img src="~/assets/img/notif.png" @click="notif = false" class="cursor-pointer notif-img" v-if="notif"/>
+    <div
+      class="btn-wa noselect flex noselect items-center justify-center"
+      @click="toWa()"
+    >
+      <img src="~/assets/img/whatsapp.svg" class="icon-img" />
+    </div>
+    <!-- <img src="~/assets/img/call3.svg" @click="toAbout()" class="cursor-pointer call-img"/> -->
+    <img
+      src="~/assets/img/notif.png"
+      @click="notif = false"
+      class="cursor-pointer notif-img"
+      v-if="notif"
+    />
     <div
       class="btn-nav flex item-center justify-center noselect"
-      style="position: fixed;"
+      style="position: fixed"
       @click="nav = true"
     >
       <img src="~/assets/img/nav.svg" class="icon-img" />
     </div>
-    <div
-      v-show="nav"
-      class="show-nav flex items-center jusitfy-center flex-col"
-    >
+    <div v-show="nav" class="show-nav flex items-center jusitfy-center flex-col">
       <img
         src="~/assets/img/close.svg"
         class="icon-btn noselect cursor-pointer"
@@ -63,28 +75,28 @@ function toWa() {
     "_blank"
   );
 }
-function toHero () {
-  window.scrollTo(0,0)
+function toHero() {
+  window.scrollTo(0, 0);
 }
-function toWhy () {
-  router.push({ path: '/', hash: '#why' })
-  this.nav = false
+function toWhy() {
+  router.push({ path: "/", hash: "#why" });
+  this.nav = false;
 }
-function toAbout () {
-  router.push({ path: '/', hash: '#about' })
-  this.nav = false
+function toAbout() {
+  router.push({ path: "/", hash: "#about" });
+  this.nav = false;
 }
-function toProduct () {
-  router.push({ path: '/', hash: '#product' })
-  this.nav = false
+function toProduct() {
+  router.push({ path: "/", hash: "#product" });
+  this.nav = false;
 }
-function toPortfolio () {
-  router.push({ path: '/', hash: '#portfolio' })
-  this.nav = false
+function toPortfolio() {
+  router.push({ path: "/", hash: "#portfolio" });
+  this.nav = false;
 }
-function toMyth () {
-  router.push({ path: '/', hash: '#about' })
-  this.nav = false
+function toMyth() {
+  router.push({ path: "/", hash: "#about" });
+  this.nav = false;
 }
 </script>
 
@@ -102,6 +114,27 @@ function toMyth () {
     position: fixed;
     bottom: 10px;
     right: 10px;
+  }
+  .btn-wa {
+    z-index: 2;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    border-radius: 51px;
+    background: #1db410;
+    width: 48px;
+    height: 47px;
+    padding-left: 14px;
+    padding-right: 14px;
+    color: #fff;
+    font-family: "okta";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    cursor: pointer;
+  }
+  .btn-wa:hover {
+    opacity: 0.8;
   }
 
   .notif-img {
