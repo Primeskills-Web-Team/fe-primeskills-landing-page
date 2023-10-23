@@ -6,15 +6,11 @@
 </template>
 
 <script setup>
-const version = 2 + 1;
-
-const message = ref("Nuxt");
-
-function hello() {
-  sayHello(message.value);
-}
 </script>
 <style>
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0 auto !important;
 }
