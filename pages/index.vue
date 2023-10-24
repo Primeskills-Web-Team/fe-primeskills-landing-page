@@ -63,7 +63,10 @@ const nav = ref(false);
 let notif = ref(true);
 
 function toWa() {
-  window.open("https://blog.primeskills.id/", "_blank");
+  window.open(
+    "https://api.whatsapp.com/send/?phone=62817719100&text&type=phone_number&app_absent=0",
+    "_blank"
+  );
 }
 
 function toBlog() {
