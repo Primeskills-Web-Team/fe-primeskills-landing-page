@@ -1,28 +1,18 @@
 <template>
   <div class="primeskills">
-    <div class="flex items-center justify-center">
-      <img
-        src="~/assets/img/logo.png"
-        @click="toHero()"
-        class="cursor-pointer logo-img"
-      />
+    <div class="flex items-center justify-center navbar">
+      <div class="container">
+        <img
+          src="~/assets/img/logo.png"
+          @click="toHero()"
+          class="cursor-pointer logo-img"
+        />
+        <div class="btn-blog" @click="toBlog()">Blog</div>
+      </div>
     </div>
-    <div
-      class="btn-wa noselect flex noselect items-center justify-center"
-      @click="toWa()"
-    >
-      <img src="~/assets/img/whatsapp.svg" class="icon-img" />
-    </div>
-    <!-- <img src="~/assets/img/call3.svg" @click="toAbout()" class="cursor-pointer call-img"/> -->
-    <img
-      src="~/assets/img/notif.png"
-      @click="notif = false"
-      class="cursor-pointer notif-img"
-      v-if="notif"
-    />
     <div
       class="btn-nav flex item-center justify-center noselect"
-      style="position: fixed"
+      style="position: fixed; z-index: 11"
       @click="nav = true"
     >
       <img src="~/assets/img/nav.svg" class="icon-img" />
@@ -33,26 +23,13 @@
         class="icon-btn noselect cursor-pointer"
         @click="nav = false"
       />
-      <!-- <div
-        class="btn-wa noselect flex noselect items-center justify-center"
-        @click="toWa()"
-      >
-        <img src="~/assets/img/whatsapp.svg" class="icon-img" />
-        Chat with us
-      </div>
-      <div
-        class="btn-touch flex noselect items-center justify-center"
-        @click="toAbout()"
-      >
-        Get In Touch
-      </div>
-      <div class="border-nav" /> -->
       <div class="text-nav noselect" @click="toWhy()">Why Us</div>
       <div class="text-nav noselect" @click="toProduct()">Our Products & Services</div>
       <div class="text-nav noselect" @click="toPortfolio()">Our Portfolios</div>
       <div class="text-nav noselect" @click="toMyth()">
         Myth and Facts about Immersive Technology
       </div>
+      <div class="text-nav noselect" @click="toBlog()">Blog</div>
     </div>
     <SectionHero id="hero" class="card-section" />
     <SectionWhyUs id="why" class="card-section" />
@@ -60,6 +37,22 @@
     <SectionPortfolio id="portfolio" class="card-section" />
     <SectionAbout id="about" class="card-section" />
     <SectionFooter id="footer" class="card-section" />
+    <div class="bottom-bar">
+      <div class="container h-full w-full">
+        <div
+          class="btn-wa noselect flex noselect items-center justify-center"
+          @click="toWa()"
+        >
+          <img src="~/assets/img/whatsapp.svg" class="icon-img" />
+        </div>
+      </div>
+    </div>
+    <img
+      src="~/assets/img/notif.png"
+      @click="notif = false"
+      class="cursor-pointer notif-img"
+      v-if="notif"
+    />
   </div>
 </template>
 
@@ -75,6 +68,11 @@ function toWa() {
     "_blank"
   );
 }
+
+function toBlog() {
+  window.open("https://blog.primeskills.id/", "_blank");
+}
+
 function toHero() {
   window.scrollTo(0, 0);
 }
@@ -102,39 +100,84 @@ function toMyth() {
 
 <style lang="scss" scoped>
 .primeskills {
-  .logo-img {
-    z-index: 2;
-    margin-left: auto;
-    margin-right: auto;
+  .navbar {
+    height: 80px;
+    width: 100%;
+    background: linear-gradient(
+      180deg,
+      #071949 19.79%,
+      rgba(7, 25, 73, 0.71) 60.42%,
+      rgba(7, 25, 73, 0) 100%
+    );
     position: fixed;
-    top: 17px;
+    top: 0px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: right;
+      .btn-blog {
+        color: #fff;
+        text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+        font-family: "inter";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        cursor: pointer;
+      }
+      .btn-blog:hover {
+        text-decoration: underline;
+      }
+    }
+    .logo-img {
+      z-index: 2;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .bottom-bar {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    z-index: 14;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: right;
+      .btn-wa {
+        z-index: 2;
+        border-radius: 51px;
+        background: #1db410;
+        width: 48px;
+        height: 47px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-family: "okta";
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        cursor: pointer;
+      }
+      .btn-wa:hover {
+        opacity: 0.8;
+      }
+    }
   }
   .call-img {
     z-index: 2;
     position: fixed;
     bottom: 10px;
     right: 10px;
-  }
-  .btn-wa {
-    z-index: 2;
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    border-radius: 51px;
-    background: #1db410;
-    width: 48px;
-    height: 47px;
-    padding-left: 14px;
-    padding-right: 14px;
-    color: #fff;
-    font-family: "okta";
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 400;
-    cursor: pointer;
-  }
-  .btn-wa:hover {
-    opacity: 0.8;
   }
 
   .notif-img {
@@ -195,7 +238,7 @@ function toMyth() {
     cursor: pointer;
     z-index: 2;
     position: absolute;
-    top: 30px;
+    top: 35px;
     right: 25px;
     display: none;
   }
@@ -206,7 +249,7 @@ function toMyth() {
     width: 100%;
     background: rgba(0, 0, 0, 0.71);
     backdrop-filter: blur(6px);
-    z-index: 4;
+    z-index: 12;
     padding: 80px 20px 20px 20px;
     .icon-btn {
       position: absolute;
@@ -284,6 +327,9 @@ function toMyth() {
     }
     .btn-nav {
       display: flex;
+    }
+    .btn-blog {
+      display: none;
     }
   }
 }
