@@ -330,24 +330,10 @@ and Discomfort?
         </div>
       </div>
       
-      <div class="card-submit flex items-center justify-center flex-col">
-        <div class="title-card">Want to learn more?</div>
+      <div class="card-submit flex items-center justify-center flex-col" style="margin-bottom: 400px;">
+        <div class="title-card">Want to learn more? drop us your email</div>
         <div class="flex items-center justify-center flex-row">
-          <div class="flex flex-row items-center">
-            <div
-              class="btn-wa noselect flex noselect items-center justify-center"
-              @click="toWa()"
-            >
-              <img src="~/assets/img/whatsapp.svg" class="icon-img" />
-              Chat with us
-            </div>
-            <div class="border-vertical" />
-          </div>
-
           <div class="flex items-start justify-center flex-col">
-            <div class="title-input">
-              or, drop us your email
-            </div>
             <div class="flex items-center form-input justify-center flex-row">
               <input v-model="email" class="input-data" />
               <div
