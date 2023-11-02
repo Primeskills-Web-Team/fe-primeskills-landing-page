@@ -330,7 +330,7 @@ and Discomfort?
         </div>
       </div>
       
-      <div class="card-submit flex items-center justify-center flex-col" style="margin-bottom: 400px;">
+      <div class="card-submit flex items-center justify-center flex-col">
         <div class="title-card">Want to learn more? drop us your email</div>
         <div class="flex items-center justify-center flex-row">
           <div class="flex items-start justify-center flex-col">
