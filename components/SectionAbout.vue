@@ -2,13 +2,159 @@
   <div class="container-section flex items-center justify-center">
     <div class="bg-img" />
     <div class="container">
+      <div class="text-desc">Client & Partners</div>
+      <div
+        class="partner-data flex items-center flex-wrap gap-y-6 gap-x-4 justify-center flex-row"
+      >
+        <img src="~/assets/img/partner/aici.png" class="img-partner" />
+        <img src="~/assets/img/partner/connext.png" class="img-partner" />
+        <img src="~/assets/img/partner/pertamina.png" class="img-partner" />
+        <img src="~/assets/img/partner/mitsubihsi.png" class="img-partner" />
+        <img src="~/assets/img/partner/sanco.png" class="img-partner" />
+        <img src="~/assets/img/partner/ui.png" class="img-partner" />
+        <img src="~/assets/img/partner/img_1.png" class="img-partner" />
+        <img src="~/assets/img/partner/unilever.png" class="img-partner" />
+        <img src="~/assets/img/partner/img_2.png" class="img-partner" />
+        <img src="~/assets/img/partner/nu.png" class="img-partner" />
+        <img src="~/assets/img/partner/umg.png" class="img-partner" />
+        <img src="~/assets/img/partner/ristek.png" class="img-partner" />
+        <img src="~/assets/img/partner/danamon.png" class="img-partner" />
+        <img src="~/assets/img/partner/ugm.png" class="img-partner" />
+        <img src="~/assets/img/partner/img_3.png" class="img-partner" />
+        <img src="~/assets/img/partner/bca.png" class="img-partner" />
+        <img src="~/assets/img/partner/cimb.png" class="img-partner" />
+      </div>
+      <carousel
+        class="carousel-mobile"
+        v-model="currentSlide"
+        :items-to-show="1"
+        touchDrag
+        mouseDrag
+      >
+        <slide class="card-carousel flex items-center w-full">
+          <div
+            class="flex items-center justify-center flex-col gap-4"
+            style="width: 100%"
+          >
+            <div class="flex items-center justify-center flex-row gap-2">
+              <img src="~/assets/img/partner/aici.png" class="img-partner" />
+              <img src="~/assets/img/partner/connext.png" class="img-partner" />
+            </div>
+            <img src="~/assets/img/partner/pertamina.png" class="img-partner" />
+          </div>
+        </slide>
+        <slide class="card-carousel flex items-center w-full">
+          <div
+            class="flex items-center justify-center flex-col gap-4"
+            style="width: 100%"
+          >
+            <div class="flex items-center justify-center flex-row gap-2">
+              <img src="~/assets/img/partner/mitsubihsi.png" class="img-partner" />
+              <img src="~/assets/img/partner/sanco.png" class="img-partner" />
+            </div>
+            <img src="~/assets/img/partner/ui.png" class="img-partner" />
+          </div>
+        </slide>
+        <slide class="card-carousel flex items-center w-full">
+          <div
+            class="flex items-center justify-center flex-col gap-4"
+            style="width: 100%"
+          >
+            <div class="flex items-center justify-center flex-row gap-2">
+              <img src="~/assets/img/partner/img_1.png" class="img-partner" />
+              <img src="~/assets/img/partner/unilever.png" class="img-partner" />
+            </div>
+            <div class="flex items-center justify-center flex-row gap-2">
+              <img src="~/assets/img/partner/img_2.png" class="img-partner" />
+              <img src="~/assets/img/partner/nu.png" class="img-partner" />
+              <img src="~/assets/img/partner/umg.png" class="img-partner" />
+              <img src="~/assets/img/partner/ristek.png" class="img-partner" />
+            </div>
+          </div>
+        </slide>
+        <slide class="card-carousel flex items-center w-full">
+          <div
+            class="flex items-center justify-center flex-col gap-4"
+            style="width: 100%"
+          >
+            <div class="flex items-center justify-center flex-row gap-2">
+              <img src="~/assets/img/partner/ugm.png" class="img-partner" />
+              <img src="~/assets/img/partner/img_3.png" class="img-partner" />
+            </div>
+            <img src="~/assets/img/partner/danamon.png" class="img-partner" />
+          </div>
+        </slide>
+        <slide class="card-carousel flex items-center w-full">
+          <div
+            class="flex items-center justify-center flex-col gap-4"
+            style="width: 100%"
+          >
+            <img src="~/assets/img/partner/bca.png" class="img-partner" />
+            <img src="~/assets/img/partner/cimb.png" class="img-partner" />
+          </div>
+        </slide>
+      </carousel>
+      <div class="flex flex-col items-center justify-center w-full btn-slide">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="100"
+          height="12"
+          viewBox="0 0 100 12"
+          fill="none"
+        >
+          <circle
+            cx="6"
+            cy="6"
+            r="6"
+            fill="#D9D9D9"
+            :fill-opacity="currentSlide === 0 ? '1' : '0.5'"
+            @click="currentSlide = 0"
+            class="cursor-pointer"
+          />
+          <circle
+            cx="26"
+            cy="6"
+            r="6"
+            fill="#D9D9D9"
+            :fill-opacity="currentSlide === 1 ? '1' : '0.5'"
+            @click="currentSlide = 1"
+            class="cursor-pointer"
+          />
+          <circle
+            cx="46"
+            cy="6"
+            r="6"
+            fill="#D9D9D9"
+            :fill-opacity="currentSlide === 2 ? '1' : '0.5'"
+            @click="currentSlide = 2"
+            class="cursor-pointer"
+          />
+          <circle
+            cx="66"
+            cy="6"
+            r="6"
+            fill="#D9D9D9"
+            :fill-opacity="currentSlide === 3 ? '1' : '0.5'"
+            @click="currentSlide = 3"
+            class="cursor-pointer"
+          />
+          <circle
+            cx="86"
+            cy="6"
+            r="6"
+            fill="#D9D9D9"
+            :fill-opacity="currentSlide === 4 ? '1' : '0.5'"
+            @click="currentSlide = 4"
+            class="cursor-pointer"
+          />
+        </svg>
+      </div>
       <div class="text-title">Myth and Facts about</div>
       <div class="text-desc">Immersive Technology</div>
-      <div class="flex flex-row justify-center gap-5 flex-nowrap container-list data-dekstop">
-        <div
-          class="card-list flex flex-col cursor-pointer"
-          @click="dialogVisible = true"
-        >
+      <div
+        class="flex flex-row justify-center gap-5 flex-nowrap container-list data-dekstop"
+      >
+        <div class="card-list flex flex-col cursor-pointer" @click="dialogVisible = true">
           <img src="~/assets/img/myth/1.png" class="img-list" />
           <div class="text-list">
             Does VR Really Cause Motion Sickness (Cybersickness) and Discomfort?
@@ -50,10 +196,9 @@
         >
           <img src="~/assets/img/myth/2.png" class="img-list" />
           <div class="text-list">
-        
             Does VR Give You an Isolating Experience?
-            <br>
-            <span style="color: transparent;">space</span>
+            <br />
+            <span style="color: transparent">space</span>
           </div>
           <svg
             class="cursor-pointer btn-show"
@@ -92,10 +237,9 @@
         >
           <img src="~/assets/img/myth/3.png" class="img-list" />
           <div class="text-list">
-          
             Does AR only used for gamifying?
-            <br>
-            <span style="color: transparent;">space</span>
+            <br />
+            <span style="color: transparent">space</span>
           </div>
           <svg
             class="cursor-pointer btn-show"
@@ -176,9 +320,7 @@
         >
           <img src="~/assets/img/myth/1.png" class="img-sec" />
           <div class="text-sec">
-            Does VR Really Cause Motion
-Sickness  (Cybersickness) 
-and Discomfort?
+            Does VR Really Cause Motion Sickness (Cybersickness) and Discomfort?
           </div>
           <svg
             class="cursor-pointer btn-show"
@@ -216,9 +358,7 @@ and Discomfort?
           @click="dialogVisible6 = true"
         >
           <img src="~/assets/img/myth/2.png" class="img-sec" />
-          <div class="text-sec">
-            Does VR Give You an Isolating Experience?
-          </div>
+          <div class="text-sec">Does VR Give You an Isolating Experience?</div>
           <svg
             class="cursor-pointer btn-show"
             xmlns="http://www.w3.org/2000/svg"
@@ -255,8 +395,7 @@ and Discomfort?
           @click="dialogVisible7 = true"
         >
           <img src="~/assets/img/myth/3.png" class="img-sec" />
-          <div class="text-sec">Does VR Give You an Isolating Experience?
-          </div>
+          <div class="text-sec">Does VR Give You an Isolating Experience?</div>
           <svg
             class="cursor-pointer btn-show"
             xmlns="http://www.w3.org/2000/svg"
@@ -293,9 +432,8 @@ and Discomfort?
           @click="dialogVisible8 = true"
         >
           <img src="~/assets/img/myth/4.png" class="img-sec" />
-          <div class="text-sec">Is Gamified Assessment and 
-            Learning just about 
-            playing games?
+          <div class="text-sec">
+            Is Gamified Assessment and Learning just about playing games?
           </div>
           <svg
             class="cursor-pointer btn-show"
@@ -329,7 +467,7 @@ and Discomfort?
           </svg>
         </div>
       </div>
-      
+
       <div class="card-submit flex items-center justify-center flex-col">
         <div class="title-card">Want to learn more? drop us your email</div>
         <div class="flex items-center justify-center flex-row">
@@ -351,14 +489,11 @@ and Discomfort?
           @click="toWa()"
         >
           <img src="~/assets/img/whatsapp.svg" class="icon-img" />
-          <div class="title-btn">
-
-            Chat with us
-          </div>
+          <div class="title-btn">Chat with us</div>
         </div>
       </div>
     </div>
-    
+
     <el-dialog
       v-model="dialogVisible"
       top="5vh"
@@ -374,21 +509,18 @@ and Discomfort?
             Does VR Really Cause Motion Sickness (Cybersickness) and Discomfort?
           </div>
           <div class="desc-content">
-            In fact, Motion sickness can be experienced by certain individuals
-            when using VR, particularly in cases where the VR experience is not
-            well-optimized. However, thanks to advancements in VR technology
-            like improved tracking and higher refresh rates, the occurrence of
-            motion sickness is being reduced.<br />
-            Primeskills, leveraging our expertise, have discovered effective
-            solutions to address this issue. We are committed to enhancing the
-            quality of VR content and creating more comfortable experiences by
-            implementing smooth motion techniques. As a result, users will
-            experience a decrease in discomfort and motion sickness when using
-            VR.<br />
-            Our collaboration with CIMB Niaga has allowed us to gather feedback
-            from multiple generations who have tried our VR content modules, and
-            they have reported feeling safe and comfortable throughout their VR
-            experiences.
+            In fact, Motion sickness can be experienced by certain individuals when using
+            VR, particularly in cases where the VR experience is not well-optimized.
+            However, thanks to advancements in VR technology like improved tracking and
+            higher refresh rates, the occurrence of motion sickness is being reduced.<br />
+            Primeskills, leveraging our expertise, have discovered effective solutions to
+            address this issue. We are committed to enhancing the quality of VR content
+            and creating more comfortable experiences by implementing smooth motion
+            techniques. As a result, users will experience a decrease in discomfort and
+            motion sickness when using VR.<br />
+            Our collaboration with CIMB Niaga has allowed us to gather feedback from
+            multiple generations who have tried our VR content modules, and they have
+            reported feeling safe and comfortable throughout their VR experiences.
           </div>
           <div class="footer-btn flex items-center justify-center">
             <div class="arrow-down" />
@@ -407,20 +539,18 @@ and Discomfort?
       <div class="dialog-btn flex items-center flex-col">
         <div class="content-data">
           <img src="~/assets/img/myth/2.png" class="img-dialog" />
-          <div class="title-content">
-            Does VR Give You an Isolating Experience?
-          </div>
+          <div class="title-content">Does VR Give You an Isolating Experience?</div>
           <div class="desc-content">
-            In fact, although VR can create an immersive and individualized
-            experience, it can also be a social activity. Multiplayer VR
-            experiences allow users to interact and collaborate with others in
-            virtual environments, fostering social connections and shared
-            experiences. Just like we did with PT. Bank Danamon Indonesia!<br />
-            Through our collaboration with PT. Bank Danamon Indonesia, we have
-            witnessed firsthand the transformative effects of immersive VR
-            training experiences. By embracing these innovations, organizations
-            can elevate their training programs and empower employees to acquire
-            new skills, improve performance, and enhance overall productivity.
+            In fact, although VR can create an immersive and individualized experience, it
+            can also be a social activity. Multiplayer VR experiences allow users to
+            interact and collaborate with others in virtual environments, fostering social
+            connections and shared experiences. Just like we did with PT. Bank Danamon
+            Indonesia!<br />
+            Through our collaboration with PT. Bank Danamon Indonesia, we have witnessed
+            firsthand the transformative effects of immersive VR training experiences. By
+            embracing these innovations, organizations can elevate their training programs
+            and empower employees to acquire new skills, improve performance, and enhance
+            overall productivity.
           </div>
           <div class="footer-btn flex items-center justify-center">
             <div class="arrow-down" />
@@ -441,15 +571,15 @@ and Discomfort?
           <img src="~/assets/img/myth/3.png" class="img-dialog" />
           <div class="title-content">Does AR only used for gamifying?</div>
           <div class="desc-content">
-            In fact, AR already gained a lot of popularity in gaming, and its
-            applications extend far beyond the users that had been experienced.
-            With AR, it is utilized in numerous fields, including education,
-            architecture, retail, marketing, and even industrial training.<br />
-            Primeskills discovers the use of AR technology for an issue that can
-            be established with a new experience, especially in education. We
-            collaborate with Terbuka University to make a new experience of a
-            learning system that can bring their communication major students in
-            advancing their style of new learning experiences.
+            In fact, AR already gained a lot of popularity in gaming, and its applications
+            extend far beyond the users that had been experienced. With AR, it is utilized
+            in numerous fields, including education, architecture, retail, marketing, and
+            even industrial training.<br />
+            Primeskills discovers the use of AR technology for an issue that can be
+            established with a new experience, especially in education. We collaborate
+            with Terbuka University to make a new experience of a learning system that can
+            bring their communication major students in advancing their style of new
+            learning experiences.
           </div>
           <div class="footer-btn flex items-center justify-center">
             <div class="arrow-down" />
@@ -472,19 +602,17 @@ and Discomfort?
             Is Gamified Assessment and Learning just about playing games?
           </div>
           <div class="desc-content">
-            In fact, Gamified Assessment and Learning involve the use of game
-            elements and mechanics to enhance motivation in educational
-            contexts. Games can be part of gamified learning because the focus
-            is on leveraging games that are based on elements, such as points,
-            challenges, and leaderboards, to create an interactive and new
-            immersive learning experience.<br />
-            This goes for our project at Fiscal Career Week and ISEEC UI,  a
-            virtual job fair that assists companies and undergraduate students
-            in enhancing their opportunities at making careers and new
-            investments. Primeskills delivers a solution for university students
-            and graduates to access job vacancies within their area of studies,
-            and for companies to access a highly skilled and relevant talent
-            pool for their job vacancies within their company. 
+            In fact, Gamified Assessment and Learning involve the use of game elements and
+            mechanics to enhance motivation in educational contexts. Games can be part of
+            gamified learning because the focus is on leveraging games that are based on
+            elements, such as points, challenges, and leaderboards, to create an
+            interactive and new immersive learning experience.<br />
+            This goes for our project at Fiscal Career Week and ISEEC UI,  a virtual job
+            fair that assists companies and undergraduate students in enhancing their
+            opportunities at making careers and new investments. Primeskills delivers a
+            solution for university students and graduates to access job vacancies within
+            their area of studies, and for companies to access a highly skilled and
+            relevant talent pool for their job vacancies within their company. 
           </div>
           <div class="footer-btn flex items-center justify-center">
             <div class="arrow-down" />
@@ -508,14 +636,23 @@ and Discomfort?
             <div class="triangle" />
           </div>
           <div class="content-dialog flex flex-col items-center">
-            <div class="intro">Does VR Really Cause Motion Sickness 
-              (Cybersickness) and Discomfort?</div>
+            <div class="intro">
+              Does VR Really Cause Motion Sickness (Cybersickness) and Discomfort?
+            </div>
             <div class="at">
-              In fact, Motion sickness can be experienced by certain individuals when using VR, particularly in cases where the VR experience is not well-optimized. However, thanks to advancements in VR technology like improved tracking and higher refresh rates, the occurrence of motion sickness is being reduced.
- <br><br>
-Primeskills, leveraging our expertise, have discovered effective solutions to address this issue. We are committed to enhancing the quality of VR content and creating more comfortable experiences by implementing smooth motion techniques. As a result, users will experience a decrease in discomfort and motion sickness when using VR.
- <br><br>
-Our collaboration with CIMB Niaga has allowed us to gather feedback from multiple generations who have tried our VR content modules, and they have reported feeling safe and comfortable throughout their VR experiences.
+              In fact, Motion sickness can be experienced by certain individuals when
+              using VR, particularly in cases where the VR experience is not
+              well-optimized. However, thanks to advancements in VR technology like
+              improved tracking and higher refresh rates, the occurrence of motion
+              sickness is being reduced.  <br /><br />
+              Primeskills, leveraging our expertise, have discovered effective solutions
+              to address this issue. We are committed to enhancing the quality of VR
+              content and creating more comfortable experiences by implementing smooth
+              motion techniques. As a result, users will experience a decrease in
+              discomfort and motion sickness when using VR.  <br /><br />
+              Our collaboration with CIMB Niaga has allowed us to gather feedback from
+              multiple generations who have tried our VR content modules, and they have
+              reported feeling safe and comfortable throughout their VR experiences.
             </div>
           </div>
         </div>
@@ -536,14 +673,19 @@ Our collaboration with CIMB Niaga has allowed us to gather feedback from multipl
             <div class="triangle" />
           </div>
           <div class="content-dialog flex flex-col items-center">
-            <div class="intro">
-              Does VR Give You an 
-Isolating Experience?
-            </div>
+            <div class="intro">Does VR Give You an Isolating Experience?</div>
             <div class="at">
-              In fact, although VR can create an immersive and individualized experience, it can also be a social activity. Multiplayer VR experiences allow users to interact and collaborate with others in virtual environments, fostering social connections and shared experiences. Just like we did with PT. Bank Danamon Indonesia!
-<br><br>
-Through our collaboration with PT. Bank Danamon Indonesia, we have witnessed firsthand the transformative effects of immersive VR training experiences. By embracing these innovations, organizations can elevate their training programs and empower employees to acquire new skills, improve performance, and enhance overall productivity.
+              In fact, although VR can create an immersive and individualized experience,
+              it can also be a social activity. Multiplayer VR experiences allow users to
+              interact and collaborate with others in virtual environments, fostering
+              social connections and shared experiences. Just like we did with PT. Bank
+              Danamon Indonesia!
+              <br /><br />
+              Through our collaboration with PT. Bank Danamon Indonesia, we have witnessed
+              firsthand the transformative effects of immersive VR training experiences.
+              By embracing these innovations, organizations can elevate their training
+              programs and empower employees to acquire new skills, improve performance,
+              and enhance overall productivity.
             </div>
           </div>
         </div>
@@ -566,9 +708,16 @@ Through our collaboration with PT. Bank Danamon Indonesia, we have witnessed fir
           <div class="content-dialog flex flex-col items-center">
             <div class="intro">Does AR only used for gamifying?</div>
             <div class="at">
-              In fact, AR already gained a lot of popularity in gaming, and its applications extend far beyond the users that had been experienced. With AR, it is utilized in numerous fields, including education, architecture, retail, marketing, and even industrial training. 
-<br><br>
-Primeskills discovers the use of AR technology for an issue that can be established with a new experience, especially in education. We collaborate with Terbuka University to make a new experience of a learning system that can bring their communication major students in advancing their style of new learning experiences.
+              In fact, AR already gained a lot of popularity in gaming, and its
+              applications extend far beyond the users that had been experienced. With AR,
+              it is utilized in numerous fields, including education, architecture,
+              retail, marketing, and even industrial training. 
+              <br /><br />
+              Primeskills discovers the use of AR technology for an issue that can be
+              established with a new experience, especially in education. We collaborate
+              with Terbuka University to make a new experience of a learning system that
+              can bring their communication major students in advancing their style of new
+              learning experiences.
             </div>
           </div>
         </div>
@@ -589,12 +738,22 @@ Primeskills discovers the use of AR technology for an issue that can be establis
             <div class="triangle" />
           </div>
           <div class="content-dialog flex flex-col items-center">
-            <div class="intro">Is Gamified Assessment and Learning 
-              just about playing games?</div>
+            <div class="intro">
+              Is Gamified Assessment and Learning just about playing games?
+            </div>
             <div class="at">
-              In fact, Gamified Assessment and Learning involve the use of game elements and mechanics to enhance motivation in educational contexts. Games can be part of gamified learning because the focus is on leveraging games that are based on elements, such as points, challenges, and leaderboards, to create an interactive and new immersive learning experience.
-<br><br>
-	This goes for our project at Fiscal Career Week and ISEEC UI,  a virtual job fair that assists companies and undergraduate students in enhancing their opportunities at making careers and new investments. Primeskills delivers a solution for university students and graduates to access job vacancies within their area of studies, and for companies to access a highly skilled and relevant talent pool for their job vacancies within  their company. 
+              In fact, Gamified Assessment and Learning involve the use of game elements
+              and mechanics to enhance motivation in educational contexts. Games can be
+              part of gamified learning because the focus is on leveraging games that are
+              based on elements, such as points, challenges, and leaderboards, to create
+              an interactive and new immersive learning experience.
+              <br /><br />
+              This goes for our project at Fiscal Career Week and ISEEC UI,  a virtual job
+              fair that assists companies and undergraduate students in enhancing their
+              opportunities at making careers and new investments. Primeskills delivers a
+              solution for university students and graduates to access job vacancies
+              within their area of studies, and for companies to access a highly skilled
+              and relevant talent pool for their job vacancies within  their company. 
             </div>
           </div>
         </div>
@@ -617,6 +776,7 @@ const dialogVisible7 = ref(false);
 const dialogVisible8 = ref(false);
 const isLoading = ref(false);
 const email = ref("");
+const currentSlide = ref(0);
 
 const handleClose = (done: () => void) => {
   done();
@@ -630,10 +790,7 @@ function toWa() {
 }
 async function save() {
   if (email.value === "") {
-    ElMessage({
-      message: "Email is not valid",
-      type: "warning",
-    });
+    ElMessage.error("Email is not valid");
   } else {
     isLoading.value = true;
     var form = {
@@ -649,9 +806,9 @@ async function save() {
       );
 
       ElMessage({
-        message: 'Thank you for subscribing',
-        type: 'success',
-      })
+        message: "Thank you for subscribing",
+        type: "success",
+      });
       isLoading.value = false;
       console.log("data from server", data.value);
     } catch (error) {
@@ -663,6 +820,9 @@ async function save() {
 </script>
 
 <style lang="scss" scoped>
+input:focus {
+  outline: none !important;
+}
 .dialog-mobile {
   width: 100%;
   height: 100%;
@@ -806,7 +966,9 @@ async function save() {
   }
 }
 .container-section {
-  height: 100vh;
+  min-height: 100vh;
+  padding-top: 200px;
+  padding-bottom: 110px;
   width: 100%;
   .bg-img {
     height: 100%;
@@ -826,6 +988,17 @@ async function save() {
     z-index: 2;
     padding-left: 10%;
     padding-right: 10%;
+    .partner-data {
+      margin-bottom: 100px;
+      margin-top: 70px;
+    }
+    .carousel-mobile {
+      display: none;
+    }
+    .btn-slide {
+      margin-top: 15px;
+      margin-bottom: 100px;
+    }
     .text-title {
       color: #fff;
       text-align: center;
@@ -843,7 +1016,7 @@ async function save() {
       font-style: normal;
       font-weight: 500;
     }
-    
+
     .card-list {
       margin-top: 40px;
       position: relative;
@@ -879,22 +1052,22 @@ async function save() {
     .data-dekstop {
       display: flex;
     }
-    
+
     .card-submit {
       margin-top: 120px;
       width: 767px;
       height: 234px;
       margin-left: auto;
-      margin-right:auto;
+      margin-right: auto;
       border-radius: 13px;
       border: 1px solid #4f4e7b;
       background: rgba(7, 25, 73, 0.71);
       box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.56);
       backdrop-filter: blur(16px);
       .title-input {
-        margin-bottom:10px;
-        color: #FFF;
-        font-family: 'okta';
+        margin-bottom: 10px;
+        color: #fff;
+        font-family: "okta";
         font-size: 14px;
         font-style: normal;
         font-weight: 500;
@@ -902,16 +1075,16 @@ async function save() {
       .border-vertical {
         border-right: 2px solid white;
         height: 99px;
-        margin-right:24px;
+        margin-right: 24px;
       }
       .border-horizontal {
-        display:none;
+        display: none;
       }
       .btn-wa2 {
         display: none;
       }
       .btn-wa {
-        margin-right:27px;
+        margin-right: 27px;
         border-radius: 51px;
         background: #1db410;
         width: 144px;
@@ -944,7 +1117,7 @@ async function save() {
         height: 29px;
         border-radius: 8px;
         background: #fff;
-        padding-left:10px;
+        padding-left: 10px;
         padding-right: 10px;
       }
       .btn-submit {
@@ -1003,6 +1176,13 @@ async function save() {
     .container {
       padding-left: 0px;
       padding-right: 0px;
+      .partner-data {
+        display: none;
+      }
+      .carousel-mobile {
+        display: block;
+        margin-top: 45px;
+      }
       .why-us {
         padding-left: 20px;
         padding-right: 20px;
@@ -1029,11 +1209,11 @@ async function save() {
         display: flex;
       }
       .container-list {
-      margin-top: 40px;
+        margin-top: 40px;
         overflow-x: scroll;
         overflow-y: hidden;
         -ms-overflow-style: none; /* Internet Explorer 10+ */
-        scrollbar-width: none; /* Firefox */
+        scrollbar-width: none; /* Firwefox */
         .sec-grup {
           min-height: 230px;
         }
@@ -1041,7 +1221,7 @@ async function save() {
       .container-list::-webkit-scrollbar {
         display: none; /* Safari and Chrome */
       }
-      
+
       .card-submit {
         width: 80%;
         height: 280px;
@@ -1052,35 +1232,35 @@ async function save() {
           display: none;
         }
         .title-input {
-          display:none;
+          display: none;
         }
         .title-card {
           font-size: 18px;
           text-align: center;
           width: 180px;
-          margin-bottom:30px;
+          margin-bottom: 30px;
         }
         .form-input {
           flex-direction: column;
           .input-data {
             width: 200px;
-            margin-bottom:10px;
+            margin-bottom: 10px;
           }
           .btn-submit {
             margin-top: 10px;
-            margin-left:0px;
+            margin-left: 0px;
           }
         }
         .border-horizontal {
           display: flex;
-          border-bottom:1px solid white;
-          margin-top:20px;
+          border-bottom: 1px solid white;
+          margin-top: 20px;
           margin-bottom: 0px;
-          width:70%;
+          width: 70%;
         }
         .btn-wa2 {
           display: flex;
-          margin-top:20px;
+          margin-top: 20px;
           border-radius: 51px;
           background: #1db410;
           width: 144px;
@@ -1089,17 +1269,16 @@ async function save() {
           padding-right: 14px;
           cursor: pointer;
           .title-btn {
-
             color: #fff;
             font-family: "okta";
             font-size: 13px;
             font-style: normal;
             font-weight: 400;
-            padding-bottom:2px;
+            padding-bottom: 2px;
           }
           .icon-img {
             margin-right: 7px;
-            height:14px;
+            height: 14px;
           }
         }
         .btn-wa:hover {
