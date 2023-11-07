@@ -996,8 +996,7 @@ input:focus {
       display: none;
     }
     .btn-slide {
-      margin-top: 15px;
-      margin-bottom: 100px;
+      display: none;
     }
     .text-title {
       color: #fff;
@@ -1182,6 +1181,11 @@ input:focus {
       .carousel-mobile {
         display: block;
         margin-top: 45px;
+      }
+
+      .btn-slide {
+        margin-top: 15px;
+        margin-bottom: 100px;
       }
       .why-us {
         padding-left: 20px;
