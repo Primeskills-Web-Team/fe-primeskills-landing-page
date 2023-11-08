@@ -1020,6 +1020,7 @@ input:focus {
       margin-top: 40px;
       position: relative;
       min-width: 198px;
+      max-width: 198px;
       min-height: 230px;
       border-radius: 10px;
       background: linear-gradient(180deg, #549adb 0%, #1d5b95 100%);
