@@ -47,12 +47,26 @@
         </div>
       </div>
     </div>
-    <img
+    <div class="notif-img" v-if="notif">
+      <div class="card-notif flex items-center justify-between">
+        <div class="text-notif">
+          Hello Mac Visitors! <br />
+          For best Experience, please zoom out the website to 80% by pressing - Thank You!
+        </div>
+        <div
+          @click="closeNotif()"
+          class="btn-close flex cursor-pointer items-center justify-center"
+        >
+          Close
+        </div>
+      </div>
+    </div>
+    <!-- <img
       src="~/assets/img/notif.png"
       @click="notif = false"
       class="cursor-pointer notif-img"
       v-if="notif"
-    />
+    /> -->
   </div>
 </template>
 
@@ -95,6 +109,9 @@ function toPortfolio() {
 function toMyth() {
   router.push({ path: "/", hash: "#about" });
   this.nav = false;
+}
+function closeNotif() {
+  this.notif = false;
 }
 </script>
 
@@ -181,9 +198,39 @@ function toMyth() {
   }
 
   .notif-img {
-    z-index: 2;
+    z-index: 16;
     position: fixed;
-    bottom: 10px;
+    bottom: 20px;
+    left: 20px;
+    .card-notif {
+      width: 621px;
+      height: 100%;
+      padding: 20px 30px 20px 30px;
+      border-radius: 8px;
+      background: rgba(7, 25, 73, 0.87);
+      box-shadow: 0px 4px 22px 0px rgba(67, 142, 255, 0.62);
+      backdrop-filter: blur(8px);
+      .text-notif {
+        color: #fff;
+        font-family: "Inter";
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+      .btn-close {
+        border-radius: 8px;
+        background: #032787;
+        width: 94px;
+        height: 30px;
+        color: #fff;
+        font-family: "Inter";
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
+    }
     // right: 10px;
   }
   .card-section {

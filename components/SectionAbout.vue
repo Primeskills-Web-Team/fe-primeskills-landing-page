@@ -753,7 +753,7 @@
               opportunities at making careers and new investments. Primeskills delivers a
               solution for university students and graduates to access job vacancies
               within their area of studies, and for companies to access a highly skilled
-              and relevant talent pool for their job vacancies within  their company. 
+              and relevant talent pool for their job vacancies within their company. 
             </div>
           </div>
         </div>
@@ -1184,6 +1184,7 @@ input:focus {
       }
 
       .btn-slide {
+        display: flex;
         margin-top: 15px;
         margin-bottom: 100px;
       }
