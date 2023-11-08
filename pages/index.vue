@@ -37,21 +37,18 @@
     <SectionPortfolio id="portfolio" class="card-section" />
     <SectionAbout id="about" class="card-section" />
     <SectionFooter id="footer" class="card-section" />
-    <div class="bottom-bar">
-      <div class="container h-full w-full">
-        <div
-          class="btn-wa noselect flex noselect items-center justify-center"
-          @click="toWa()"
-        >
-          <img src="~/assets/img/whatsapp.svg" class="icon-img" />
-        </div>
-      </div>
+    <div
+      class="btn-wa noselect flex noselect items-center justify-center"
+      @click="toWa()"
+    >
+      <img src="~/assets/img/whatsapp.svg" class="icon-img" />
     </div>
     <div class="notif-img" v-if="notif">
       <div class="card-notif flex items-center justify-between">
         <div class="text-notif">
           Hello Mac Visitors! <br />
-          For best Experience, please zoom out the website to 80% by pressing - Thank You!
+          For best Experience, please zoom out the website to 80% by pressing ⌘ - Thank
+          You!
         </div>
         <div
           @click="closeNotif()"
@@ -61,12 +58,6 @@
         </div>
       </div>
     </div>
-    <!-- <img
-      src="~/assets/img/notif.png"
-      @click="notif = false"
-      class="cursor-pointer notif-img"
-      v-if="notif"
-    /> -->
   </div>
 </template>
 
@@ -92,26 +83,26 @@ function toHero() {
 }
 function toWhy() {
   router.push({ path: "/", hash: "#why" });
-  this.nav = false;
+  nav.value = false;
 }
 function toAbout() {
   router.push({ path: "/", hash: "#about" });
-  this.nav = false;
+  nav.value = false;
 }
 function toProduct() {
   router.push({ path: "/", hash: "#product" });
-  this.nav = false;
+  nav.value = false;
 }
 function toPortfolio() {
   router.push({ path: "/", hash: "#portfolio" });
-  this.nav = false;
+  nav.value = false;
 }
 function toMyth() {
   router.push({ path: "/", hash: "#about" });
-  this.nav = false;
+  nav.value = false;
 }
 function closeNotif() {
-  this.notif = false;
+  notif.value = false;
 }
 </script>
 
@@ -156,39 +147,27 @@ function closeNotif() {
       margin-right: auto;
     }
   }
-  .bottom-bar {
+  .btn-wa {
     position: fixed;
-    bottom: 0px;
-    width: 100%;
-    z-index: 14;
-    height: 100px;
+    bottom: 20px;
+    right: 20px;
+    z-index: 2;
+    border-radius: 51px;
+    background: #1db410;
+    width: 48px;
+    height: 47px;
     display: flex;
     align-items: center;
     justify-content: center;
-    .container {
-      display: flex;
-      align-items: center;
-      justify-content: right;
-      .btn-wa {
-        z-index: 2;
-        border-radius: 51px;
-        background: #1db410;
-        width: 48px;
-        height: 47px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #fff;
-        font-family: "okta";
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 400;
-        cursor: pointer;
-      }
-      .btn-wa:hover {
-        opacity: 0.8;
-      }
-    }
+    color: #fff;
+    font-family: "okta";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    cursor: pointer;
+  }
+  .btn-wa:hover {
+    opacity: 0.8;
   }
   .call-img {
     z-index: 2;
@@ -215,8 +194,8 @@ function closeNotif() {
         font-family: "Inter";
         font-size: 13px;
         font-style: normal;
-        font-weight: 500;
-        line-height: normal;
+        font-weight: 600;
+        margin-right: 40px;
       }
       .btn-close {
         border-radius: 8px;
@@ -228,7 +207,9 @@ function closeNotif() {
         font-size: 13px;
         font-style: normal;
         font-weight: 600;
-        line-height: normal;
+      }
+      .btn-close:hover {
+        opacity: 0.8;
       }
     }
     // right: 10px;
@@ -377,6 +358,18 @@ function closeNotif() {
     }
     .btn-blog {
       display: none;
+    }
+    .notif-img {
+      left: 10px;
+      right: 10px;
+      .card-notif {
+        width: 100%;
+        padding: 10px 20px 10px 20px;
+        .text-notif {
+          font-size: 11px;
+          margin-right: 20px;
+        }
+      }
     }
   }
 }

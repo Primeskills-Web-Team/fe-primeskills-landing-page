@@ -10,8 +10,8 @@
       <div class="space">SPACE</div>
       <div class="innovation">Where innovation meets immersion</div>
       <div class="skill">
-        By transforming <span class="gaps">skill gaps</span> into opportuninites
-        for <span class="growth">growth</span> and
+        By transforming <span class="gaps">skill gaps</span> into opportuninites for
+        <span class="growth">growth</span> and
         <span class="growth">excellence, </span>
         <span class="growth">we empower learners to succeed.</span>
       </div>
@@ -77,23 +77,22 @@
           <div class="data-text">
             At Primeskills, we're driven by a
             <span class="data-bold">passion to bridge the skill gap</span> and
-            <span class="data-bold">democratize education</span> through the
-            power of technology. As an innovative <br />
-            <span class="data-bold">Education Technology Start-Up</span>, we
-            simplify and optimize processes while gamifying the educational
-            journey. Through strategic consulting and <br />
-            collaborative efforts, we ensure learning equality by developing
-            immersive solutions that combine play, competition, and rewards.
+            <span class="data-bold">democratize education</span> through the power of
+            technology. As an innovative <br />
+            <span class="data-bold">Education Technology Start-Up</span>, we simplify and
+            optimize processes while gamifying the educational journey. Through strategic
+            consulting and <br />
+            collaborative efforts, we ensure learning equality by developing immersive
+            solutions that combine play, competition, and rewards.
             <br />
             <br />
-            Our goal is to make learning accessible, exciting, and engaging for
-            all individuals and industries. By transforming skill gaps into
-            opportunities <br />
-            for growth and excellence, we empower learners to succeed. At
-            Primeskills, we're not just revolutionizing education—we're
-            transforming lives <br />
-            and industries, creating a future where everyone can access and
-            benefit from their prime skills to thrive.
+            Our goal is to make learning accessible, exciting, and engaging for all
+            individuals and industries. By transforming skill gaps into opportunities
+            <br />
+            for growth and excellence, we empower learners to succeed. At Primeskills,
+            we're not just revolutionizing education—we're transforming lives <br />
+            and industries, creating a future where everyone can access and benefit from
+            their prime skills to thrive.
           </div>
         </div>
         <div class="bg-grad" />
@@ -119,19 +118,18 @@
             <div class="at">
               At Primeskills, we're driven by a
               <span class="data-bold">passion to bridge the skill gap</span> and
-              <span class="data-bold">democratize education</span> through the
-              power of technology. As an innovative
-              <span class="data-bold">Education Technology Start-Up</span>, we
-              simplify and optimize processes while gamifying the educational
-              journey. Through strategic consulting and collaborative efforts,
-              we ensure learning equality by developing immersive solutions that
-              combine play, competition, and rewards. Our goal is to make
-              learning accessible, exciting, and engaging for all individuals
-              and industries. By transforming skill gaps into opportunities for
-              growth and excellence, we empower learners to succeed. At
-              Primeskills, we're not just revolutionizing education—we're
-              transforming lives and industries, creating a future where
-              everyone can access and benefit from their prime skills to thrive.
+              <span class="data-bold">democratize education</span> through the power of
+              technology. As an innovative
+              <span class="data-bold">Education Technology Start-Up</span>, we simplify
+              and optimize processes while gamifying the educational journey. Through
+              strategic consulting and collaborative efforts, we ensure learning equality
+              by developing immersive solutions that combine play, competition, and
+              rewards. Our goal is to make learning accessible, exciting, and engaging for
+              all individuals and industries. By transforming skill gaps into
+              opportunities for growth and excellence, we empower learners to succeed. At
+              Primeskills, we're not just revolutionizing education—we're transforming
+              lives and industries, creating a future where everyone can access and
+              benefit from their prime skills to thrive.
             </div>
           </div>
         </div>
@@ -154,8 +152,8 @@ const handleClose = (done: () => void) => {
 function btnNext() {
   emit("clicked", "hero");
 }
-function toHero () {
-  router.push({ path: '/', hash: '#' })
+function toHero() {
+  router.push({ path: "/", hash: "#" });
 }
 </script>
 <style lang="scss" scoped>
@@ -439,6 +437,7 @@ function toHero () {
     .btn-next {
       position: absolute;
       bottom: -30px;
+      z-index: 15;
     }
   }
   .logo-img {
