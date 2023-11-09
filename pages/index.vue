@@ -7,9 +7,9 @@
           @click="toHero()"
           class="cursor-pointer logo-img"
         />
-        <div class="btn-blog" @click="toBlog()">Blog</div>
       </div>
     </div>
+    <div class="btn-blog" @click="toBlog()">Blog</div>
     <div
       class="btn-nav flex item-center justify-center noselect"
       style="position: fixed; z-index: 11"
@@ -66,6 +66,13 @@ const router = useRouter();
 
 const nav = ref(false);
 let notif = ref(true);
+onMounted(() => {
+  if (navigator.appVersion.indexOf("Mac") != -1) {
+    notif.value = true;
+  } else {
+    notif.value = false;
+  }
+});
 
 function toWa() {
   window.open(
@@ -108,6 +115,20 @@ function closeNotif() {
 
 <style lang="scss" scoped>
 .primeskills {
+  .btn-blog {
+    position: fixed;
+    top: 30px;
+    right: 20px;
+    color: #fff;
+    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+    font-family: "inter";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    cursor: pointer;
+    z-index: 11;
+  }
   .navbar {
     height: 80px;
     width: 100%;
@@ -127,16 +148,6 @@ function closeNotif() {
       display: flex;
       align-items: center;
       justify-content: right;
-      .btn-blog {
-        color: #fff;
-        text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
-        font-family: "inter";
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
-        cursor: pointer;
-      }
       .btn-blog:hover {
         text-decoration: underline;
       }
@@ -344,6 +355,16 @@ function closeNotif() {
     }
     .text-nav:hover {
       text-decoration: underline;
+    }
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .primeskills {
+    .btn-blog {
+      right: 60px;
+    }
+    .btn-wa {
+      right: 60px;
     }
   }
 }
