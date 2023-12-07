@@ -58,6 +58,16 @@
         </div>
       </div>
     </div>
+
+    <!-- The Modal -->
+    <div class="pop-up" @click="popUp = false" :class="{'pop-up-hide': !popUp, 'pop-up-show': popUp}">
+      <!-- Modal content -->
+      <div class="pop-up-content">
+        <span class="close" @click="popUp = false">&times;</span>
+        <img src="~/assets/img/elwyn.svg" alt="elwyn" style="border-radius: 10px" />
+      </div>
+
+    </div>
   </div>
 </template>
 
@@ -66,12 +76,17 @@ const router = useRouter();
 
 const nav = ref(false);
 let notif = ref(true);
+let popUp = ref(false);
 onMounted(() => {
   if (navigator.appVersion.indexOf("Mac") != -1) {
     notif.value = true;
   } else {
     notif.value = false;
   }
+
+  setTimeout(() => {
+    popUp.value = true;
+  }, 1500)
 });
 
 function toWa() {
@@ -115,6 +130,51 @@ function closeNotif() {
 
 <style lang="scss" scoped>
 .primeskills {
+
+  .pop-up-show {
+    display: block;
+  }
+
+  .pop-up-hide {
+    display: none;
+  }
+
+  /* The Modal (background) */
+  .pop-up {
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  /* Modal Content */
+  .pop-up-content {
+    background-color: transparent;
+    margin: auto;
+    padding: 20px;
+    width: 40%;
+  }
+
+  /* The Close Button */
+  .pop-up-content .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .pop-up-content .close:hover,
+  .pop-up-content .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
   .btn-blog {
     position: fixed;
     top: 30px;
